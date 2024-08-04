@@ -14,6 +14,10 @@ func main() {
 		panic(1)
 	}
 	notes.PrintNote()
+	err = notes.WriteToFile()
+	if err != nil {
+		panic(1)
+	}
 }
 
 func getInput() (string, string) {
